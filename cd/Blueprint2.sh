@@ -65,22 +65,26 @@ animate_progress() {
 # Welcome animation
 welcome_animation() {
     clear
-    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo -e "${CYAN}"
-    echo "   ███╗   ██╗ ██████╗ ██████╗ ██╗████████╗ █████╗ "
-    echo "   ████╗  ██║██╔═══██╗██╔══██╗██║╚══██╔══╝██╔══██╗"
-    echo "   ██╔██╗ ██║██║   ██║██████╔╝██║   ██║   ███████║"
-    echo "   ██║╚██╗██║██║   ██║██╔══██╗██║   ██║   ██╔══██║"
-    echo "   ██║ ╚████║╚██████╔╝██║  ██║██║   ██║   ██║  ██║"
-    echo "   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝"
+    echo -e "  
+    echo  "            _   _      _      ____     ___   __        __   ____   ____       _      _____   _____ 
+    echo  "           / ___|  | | | |    / \    |  _ \   / _ \  \ \      / /  / ___| |  _ \     / \    |  ___| |_   _|
+    echo  "           \___ \  | |_| |   / _ \   | | | | | | | |  \ \ /\ / /  | |     | |_) |   / _ \   | |_      | |  
+    echo  "            ___) | |  _  |  / ___ \  | |_| | | |_| |   \ V  V /   | |___  |  _ <   / ___ \  |  _|     | |  
+    echo  "            |____/  |_| |_| /_/   \_\ |____/   \___/     \_/\_/     \____| |_| \_\ /_/   \_\ |_|       |_|  
+    echo  "   
+    echo  "                                POWERED BY ShadowCraftMC${NC}"
+    echo  "   
+    echo  "   
     echo -e "${NC}"
-    echo -e "${CYAN}              Blueprint Installer${NC}"
-    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    sleep 2
+    echo -e "${CYAN}                 
+    echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    sleep 2  
 }
 
 # Function: Install (Fresh Setup)
-install_nobita() {
+install_blueprint() {
     print_header "FRESH INSTALLATION"
     
     if [ "$EUID" -ne 0 ]; then
@@ -88,7 +92,7 @@ install_nobita() {
         return 1
     fi
 
-    print_status "Starting Fresh Install for Nobita Hosting"
+    print_status "Starting Fresh Install for Blueprint"
 
     # --- Step 1: Install Node.js 20.x ---
     print_header "INSTALLING NODE.JS 20.x"
@@ -207,9 +211,9 @@ while true; do
     read -r choice
     
     case $choice in
-        1) install_nobita ;;
-        2) reinstall_nobita ;;
-        3) update_nobita ;;
+        1) fresh_instakl ;;
+        2) reinstall_blueprint ;;
+        3) update_blueprint ;;
         0) 
             echo -e "${GREEN}Exiting Blueprint Installer...${NC}"
             echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
